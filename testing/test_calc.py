@@ -1,13 +1,9 @@
-import sys
 import unittest
-
-from python.calc import Calc
-
-print(sys.path)
 
 
 class TestCalc(unittest.TestCase):
     def setUp(self) -> None:
+        from python.calc import Calc
         self.calc = Calc()
 
     def test_add_1(self):
