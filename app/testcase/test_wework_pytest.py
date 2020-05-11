@@ -42,7 +42,7 @@ class TestWeworkPytest:
         :return:
         """
         # 使用显示等待加载首屏
-        WebDriverWait(self.driver, 10).until(
+        WebDriverWait(self.driver, 20).until(
             expected_conditions.element_to_be_clickable((MobileBy.XPATH, "//*[@text='通讯录']")))
         # 点击通讯录
         self.driver.find_element(MobileBy.XPATH, "//*[@text='通讯录']").click()
