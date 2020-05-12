@@ -1,7 +1,7 @@
 
 class TestCalc:
     def setup(self):
-        from python.calc import Calc
+        from pythons.calc import Calc
         self.calc = Calc()
 
     def test_add(self):

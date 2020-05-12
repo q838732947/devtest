@@ -1,9 +1,9 @@
 import pytest
 
-from python import is_leap_year
+from . import is_leap_year
 
 
-class TestAssert():
+class TestAssert:
     @pytest.mark.p2
     def test_exception_typeerror(self):
         with pytest.raises(TypeError):
@@ -16,9 +16,9 @@ class TestAssert():
         assert "从公元一年开始" in str(execinfo.value)
         assert execinfo.type == ValueError
 
-    @pytest.mark.p1
-    def test_true(self):
-        assert is_leap_year.is_leap_year(400) == True
+    @pytest.mark.parametrize("year", [400, 2004])
+    def test_true(self, year):
+        assert is_leap_year.is_leap_year(year) is True
 
     @pytest.mark.xfail(raises=ValueError)
     def test_a(self):

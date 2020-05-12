@@ -3,7 +3,7 @@ import unittest
 
 class TestCalc(unittest.TestCase):
     def setUp(self) -> None:
-        from python.calc import Calc
+        from pythons.calc import Calc
         self.calc = Calc()
 
     def test_add_1(self):
