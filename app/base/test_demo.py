@@ -5,6 +5,7 @@ from appium.webdriver.common.mobileby import MobileBy
 
 
 class TestDemo:
+    # 雪球app demo
     def setup(self):
         desired_caps = {}
         # {'noReset': 'True', 'platformName': 'Android', 'platformVersion': '6.0','deviceName': 'emulator-5554', 'appPackage': 'com.xueqiu.android','appActivity': 'com.xueqiu.android.common.MainActivity'}

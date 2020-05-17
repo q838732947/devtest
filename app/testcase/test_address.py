@@ -33,8 +33,7 @@ class TestAddress:
     ])
     def test_addconnect(self, name, gender, phonenum):
         """
-        将课上的添加联系人，自己编写一条用例
-        注意：添加联系人的姓名以固定字符开头，例如：测试name1，测试name2，测试name3
+        添加联系人的姓名以固定字符开头，例如：测试name1，测试name2，测试name3
          """
         # 使用显示等待加载首屏
         WebDriverWait(self.driver, 10).until(
