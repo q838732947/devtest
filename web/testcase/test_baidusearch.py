@@ -34,6 +34,9 @@ class Test_BaiduSearch:
 
 if __name__ == '__main__':
     # pytest test_baidusearch.py --alluredir ./result/
-    # 在线查看报告，直接打开默认浏览器展示当前报告
+    # 方案1：在线查看报告，直接打开默认浏览器展示当前报告
     # allure serve ./result/
+    # 方案2：从结果生成报告，这是启动一个tomcat的服务，分两步：生成报告、打开报告
+    # allure generate ./result/ -o ./report/ --clean (覆盖路径加--clean)
+    # allure open -h 127.0.0.1 -p 8883 ./report
     pytest.main()
