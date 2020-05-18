@@ -20,7 +20,7 @@ class TestAddressCase:
 
     @pytest.mark.parametrize("name,msg", [
         ("陈灵", "hello"),
-        # ("灵芝","words")
+        # ("测试","words")
     ])
     def test_say(self, name, msg):
         App().start().main().goto_tab2().search().searchtext(f"{name}").pointfirstresult().sendmessage().sendmsg(

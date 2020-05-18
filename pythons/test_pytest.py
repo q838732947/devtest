@@ -1,6 +1,7 @@
 import pytest
 
 
+# 官方文档 https://docs.pytest.org/en/latest/skipping.html
 class TestPytest:
     def setup(self):
         print("setup")
