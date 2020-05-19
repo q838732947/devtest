@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions
 
 
 class TestAddress:
+    #不使用PO模式编写
     def setup_class(self):
         desired_caps = {}
         # noReset
