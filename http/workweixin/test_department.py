@@ -5,7 +5,7 @@ import pytest
 import requests
 import yaml
 
-
+# todo:调用httpBase重写
 def get_token() -> str:
     with open("./department.yaml") as f:
         d = yaml.safe_load(f)
