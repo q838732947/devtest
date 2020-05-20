@@ -3,6 +3,6 @@
     
     目录及对应内容：
     app：appium对于雪球、企业微信的app自动化演练
-    http：关于requess相关的接口演练
+    http：使用requests+yaml格式进行数据驱动
     python：关于python相关模块的练习
-    web：使用webdriver演练web自动化
+    web：使用selenium进行web自动化，并将页面截图保存在测试报告（allure2）中
