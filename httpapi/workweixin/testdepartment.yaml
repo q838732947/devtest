@@ -1,0 +1,40 @@
+- comment: 获取部门列表
+  method: get
+  params:
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/list
+  data:
+  assert:
+    errcode: 0
+    errmsg: ok
+
+- comment: 创建部门
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/create
+  params:
+  data:
+    "name": 技术部
+    "parentid": 1
+  assert:
+    errcode: 0
+    errmsg: created
+
+- comment: 更新部门
+  method: post
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/update
+  params:
+  data:
+    id: 2
+    name: 技术研发中心2
+  assert:
+    errcode: 0
+    errmsg: updated
+
+- comment: 删除部门
+  method: get
+  params:
+    id: 2
+  url: https://qyapi.weixin.qq.com/cgi-bin/department/delete
+  data:
+  assert:
+    errcode: 0
+    errmsg: deleted

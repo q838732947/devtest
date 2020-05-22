@@ -30,9 +30,9 @@ def get_token(module) -> str:
     else:
         return access_token
 
-def yaml_steps(path):
+def yaml_steps(path,module):
     with allure.step("获取token"):
-        access_token = get_token("address")
+        access_token = get_token(module)
     with open(path) as f:
         request = yaml.safe_load(f)
         # print(request)
