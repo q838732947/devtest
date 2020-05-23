@@ -1,0 +1,4 @@
+- store:
+    book:
+      author: "$author"
+      price: 17.1
