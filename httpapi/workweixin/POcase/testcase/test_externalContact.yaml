@@ -19,7 +19,7 @@
     errcode: 0
     errmsg: ok
   save_var:
-    tagid: 0
+    tagid: $..id
 
 
 - comment: 编辑企业客户标签

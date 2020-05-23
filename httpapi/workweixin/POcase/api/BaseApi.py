@@ -5,6 +5,7 @@ from string import Template
 import allure
 import requests
 import yaml
+from jsonpath import jsonpath
 
 
 class BaseApi:
@@ -47,8 +48,12 @@ class BaseApi:
                         if "save_var" in r.keys():
                             save_var = r["save_var"]
                             for key in save_var.keys():
-                                if key == "tagid":
-                                    save_var[key] = re.json()["tag_group"][0]["tag"][save_var[key]]["id"]
+                                # if key == "tagid":
+                                #     save_var[key] = re.json()["tag_group"][0]["tag"][save_var[key]]["id"]
+                                # if key == "tagids":
+                                #     save_var[key] = jsonpath(re.json(),save_var[key])[0]
+                                save_var[key] = jsonpath(re.json(), save_var[key])[0]
+                            print("保存参数字典"+save_var)
                         print(re.json())
                         if r['assert'] is not None:
                             for key in r['assert'].keys():
