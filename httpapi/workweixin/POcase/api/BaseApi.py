@@ -1,5 +1,6 @@
 import json
 import time
+from string import Template
 
 import allure
 import requests
@@ -25,11 +26,17 @@ class BaseApi:
                         if r['data'] is not None:
                             data = r['data']
                             if "use_var" in r.keys():
-                                for var in save_var:
-                                    data = json.dumps(data)
-                                    data = data.replace(var, save_var[var])
-                                    data = json.loads(data)
-                                    # print(data)
+                                data = Template(json.dumps(data)).safe_substitute(save_var)
+                                # print("****" * 5)
+                                data = json.loads(data)
+                                # print(data)
+
+                                # for var in save_var:
+                                #     data = json.dumps(data)
+                                #     data = data.replace(var, save_var[var])
+                                #     data = json.loads(data)
+                                #     print("****"*5+"data:")
+                                #     print(data)
 
                         re = requests.request(method=r["method"], url=r["url"], params=params, json=data)
                         # if r["method"] == "get":

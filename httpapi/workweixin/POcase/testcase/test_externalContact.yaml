@@ -28,7 +28,7 @@
   url: https://qyapi.weixin.qq.com/cgi-bin/externalcontact/edit_corp_tag
   use_var: True
   data:
-    id: tagid
+    id: $tagid
     name: wangwu
   assert:
     errcode: 0
@@ -41,7 +41,7 @@
   use_var: True
   data:
     tag_id:
-      - tagid
+      - $tagid
   assert:
     errcode: 0
     errmsg: ok
