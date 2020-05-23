@@ -43,10 +43,9 @@ class Solution:
                 if s != s1:
                     next += str(count) + s1
                     count = 1
-                    s1 = s
                 else:
                     count += 1
-                    s1 = s
+                s1 = s
             next += str(count) + s1
             # print(next)
             pre = next
