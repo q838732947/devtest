@@ -6,19 +6,21 @@ import allure
 import requests
 import yaml
 from jsonpath import jsonpath
+import logging
 
+logging.basicConfig(level=logging.INFO)
 
 class BaseApi:
+    log = logging.getLogger()
     def yaml_steps(self, path, module):
         with allure.step("获取token"):
             access_token = self.get_token(module)
         with open(path) as f:
             request = yaml.safe_load(f)
-            # print(request)
             for r in request:
-                print(r["comment"])
+                self.log.info(r["comment"])
                 with allure.step(r["comment"]):
-                    try:
+                    # try:
                         params = {"access_token": access_token}
                         data = {}
                         if r['params'] is not None:
@@ -28,10 +30,8 @@ class BaseApi:
                             data = r['data']
                             if "use_var" in r.keys():
                                 data = Template(json.dumps(data)).safe_substitute(save_var)
-                                # print("****" * 5)
                                 data = json.loads(data)
-                                # print(data)
-
+                                self.log.debug(data)
                                 # for var in save_var:
                                 #     data = json.dumps(data)
                                 #     data = data.replace(var, save_var[var])
@@ -40,27 +40,20 @@ class BaseApi:
                                 #     print(data)
 
                         re = requests.request(method=r["method"], url=r["url"], params=params, json=data)
-                        # if r["method"] == "get":
-                        #     re = requests.get(url=url, params=params, json=data)
-                        # if r["method"] == "post":
-                        #     re = requests.post(url=url, params=params, json=data)
 
                         if "save_var" in r.keys():
                             save_var = r["save_var"]
                             for key in save_var.keys():
-                                # if key == "tagid":
-                                #     save_var[key] = re.json()["tag_group"][0]["tag"][save_var[key]]["id"]
-                                # if key == "tagids":
-                                #     save_var[key] = jsonpath(re.json(),save_var[key])[0]
                                 save_var[key] = jsonpath(re.json(), save_var[key])[0]
-                            print("保存参数字典"+save_var)
+                            self.log.debug("保存参数字典:")
+                            self.log.debug(save_var)
                         print(re.json())
                         if r['assert'] is not None:
                             for key in r['assert'].keys():
                                 assert r['assert'][key] == re.json()[key]
-                    except Exception:
-                        print("failed")
-                        continue
+                    # except Exception:
+                    #     print("failed")
+                    #     continue
 
     def get_token(self, module) -> str:
         with open("../api/baseconfig.yaml") as f:
@@ -73,11 +66,11 @@ class BaseApi:
                 else:
                     y += 1
         now = int(time.time())
-        # print(d)
         if now - last_time > 7200:
             url = f'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={id}&corpsecret={secret}'
             r = requests.get(url=url)
             print(r.json())
+            self.log.info(f"请求token：{r}")
             d['access_token'] = r.json()['access_token']
             d['last_time'] = now
             x[y] = d
@@ -89,7 +82,7 @@ class BaseApi:
 
     def send_api(self, req: dict):
         r = requests.request(**req).json()
-        print(json.dumps(r, indent=2))
+        self.log.info(json.dumps(r, indent=2))
         return r
 
 
