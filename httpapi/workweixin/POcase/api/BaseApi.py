@@ -36,8 +36,8 @@ class BaseApi:
                                 #     data = json.dumps(data)
                                 #     data = data.replace(var, save_var[var])
                                 #     data = json.loads(data)
-                                #     print("****"*5+"data:")
-                                #     print(data)
+                                #     self.log.debug("****"*5+"data:")
+                                #     self.log.debug(data)
 
                         re = requests.request(method=r["method"], url=r["url"], params=params, json=data)
 
@@ -47,12 +47,12 @@ class BaseApi:
                                 save_var[key] = jsonpath(re.json(), save_var[key])[0]
                             self.log.debug("保存参数字典:")
                             self.log.debug(save_var)
-                        print(re.json())
+                        self.log.info(re.json())
                         if r['assert'] is not None:
                             for key in r['assert'].keys():
                                 assert r['assert'][key] == re.json()[key]
                     # except Exception:
-                    #     print("failed")
+                    #     self.log.error("failed")
                     #     continue
 
     def get_token(self, module) -> str:
@@ -69,8 +69,7 @@ class BaseApi:
         if now - last_time > 7200:
             url = f'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={id}&corpsecret={secret}'
             r = requests.get(url=url)
-            print(r.json())
-            self.log.info(f"请求token：{r}")
+            self.log.info(r.json())
             d['access_token'] = r.json()['access_token']
             d['last_time'] = now
             x[y] = d
