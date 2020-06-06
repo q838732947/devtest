@@ -1,0 +1,54 @@
+Creating summariser <summary>
+Created the tree successfully using ling_10.jmx
+Starting standalone test @ Wed May 27 20:14:19 CST 2020 (1590581659263)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    101 in 00:00:11 =    9.5/s Avg:   518 Min:     3 Max:  2433 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary +    360 in 00:00:29 =   12.3/s Avg:   609 Min:     2 Max:  2427 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary =    461 in 00:00:40 =   11.6/s Avg:   589 Min:     2 Max:  2433 Err:     0 (0.00%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   354 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_20.jmx
+Starting standalone test @ Wed May 27 20:15:24 CST 2020 (1590581724134)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +    121 in 00:00:07 =   17.2/s Avg:   435 Min:     3 Max:  2457 Err:     0 (0.00%) Active: 20 Started: 20 Finished: 0
+summary +    720 in 00:00:29 =   24.6/s Avg:   618 Min:     2 Max:  2459 Err:     0 (0.00%) Active: 20 Started: 20 Finished: 0
+summary =    841 in 00:00:36 =   23.2/s Avg:   592 Min:     2 Max:  2459 Err:     0 (0.00%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   399 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_30.jmx
+Starting standalone test @ Wed May 27 20:16:28 CST 2020 (1590581788637)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +     19 in 00:00:00 =   41.7/s Avg:    21 Min:     3 Max:    56 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+summary +   1113 in 00:00:30 =   37.1/s Avg:   597 Min:     2 Max:  2543 Err:     0 (0.00%) Active: 30 Started: 30 Finished: 0
+summary =   1132 in 00:00:30 =   37.2/s Avg:   587 Min:     2 Max:  2543 Err:     0 (0.00%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   434 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_40.jmx
+Starting standalone test @ Wed May 27 20:17:33 CST 2020 (1590581853903)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1109 in 00:00:25 =   45.0/s Avg:   606 Min:     2 Max:  2547 Err:     0 (0.00%) Active: 40 Started: 40 Finished: 0
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   466 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_50.jmx
+Starting standalone test @ Wed May 27 20:18:40 CST 2020 (1590581920792)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1101 in 00:00:20 =   54.7/s Avg:   584 Min:     2 Max:  2449 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary +   1800 in 00:00:29 =   61.3/s Avg:   619 Min:     2 Max:  2525 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+summary =   2901 in 00:00:49 =   58.6/s Avg:   606 Min:     2 Max:  2525 Err:     0 (0.00%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   488 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_100.jmx
+Starting standalone test @ Wed May 27 20:19:44 CST 2020 (1590581984012)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1662 in 00:00:15 =  112.2/s Avg:   600 Min:     2 Max:  2595 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+summary +   3648 in 00:00:30 =  121.6/s Avg:   625 Min:     2 Max:  2682 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+summary =   5310 in 00:00:45 =  118.5/s Avg:   617 Min:     2 Max:  2682 Err:     0 (0.00%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   514 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
+Creating summariser <summary>
+Created the tree successfully using ling_200.jmx
+Starting standalone test @ Wed May 27 20:20:49 CST 2020 (1590582049165)
+Waiting for possible Shutdown/StopTestNow/HeapDump/ThreadDump message on port 4445
+summary +   1625 in 00:00:10 =  170.5/s Avg:   779 Min:     1 Max:  3183 Err:    50 (3.08%) Active: 200 Started: 200 Finished: 0
+summary +   6366 in 00:00:30 =  212.6/s Avg:   722 Min:     1 Max:  3465 Err:    14 (0.22%) Active: 200 Started: 200 Finished: 0
+summary =   7991 in 00:00:39 =  202.4/s Avg:   734 Min:     1 Max:  3465 Err:    64 (0.80%)
+/Users/chenling/Downloads/apache-jmeter-5.3//bin/jmeter: line 199:   541 Killed: 9               "$JAVA_HOME/bin/java" $ARGS $JVM_ARGS $JMETER_OPTS -jar "$PRGDIR/ApacheJMeter.jar" "$@"
