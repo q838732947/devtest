@@ -62,7 +62,8 @@ def main():
     # print(compare_two_folder_is_same(folder1, folder2))
     # print(check_file_exist(folder1))
     # file_not_exists_then_makedir(folder1)
-    f=with_open(folder1)
+    f = with_open(folder1)
+
 
 if __name__ == '__main__':
     pass

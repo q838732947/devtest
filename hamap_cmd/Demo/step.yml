@@ -1,0 +1,5 @@
+- comment: 执行step1
+  cmd: python step_1.py schoolname -a a_value --male women
+
+- comment: 执行step2
+  cmd: python step_2.py -t -s string -c
